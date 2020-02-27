@@ -162,6 +162,10 @@
         <translation>Хабарни &amp;тасдиқлаш...</translation>
     </message>
     <message>
+        <source>Bitcoin</source>
+        <translation>Bitcoin</translation>
+    </message>
+    <message>
         <source>&amp;Send</source>
         <translation>&amp;Жўнатиш</translation>
     </message>
@@ -346,12 +350,6 @@
     </message>
     </context>
 <context>
-    <name>CreateWalletActivity</name>
-    </context>
-<context>
-    <name>CreateWalletDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -468,9 +466,6 @@
         <source>Select payment request file</source>
         <translation>Тўлов сўрови файлини танлаш</translation>
     </message>
-    </context>
-<context>
-    <name>OpenWalletActivity</name>
     </context>
 <context>
     <name>OptionsDialog</name>
@@ -716,11 +711,10 @@
     </message>
 </context>
 <context>
+    <name>QObject::QObject</name>
+    </context>
+<context>
     <name>QRImageWidget</name>
-    <message>
-        <source>&amp;Save Image...</source>
-        <translation>Расмни &amp;сақлаш</translation>
-    </message>
     </context>
 <context>
     <name>RPCConsole</name>
@@ -908,6 +902,10 @@
         <translation>Сўралган тўлов тарихи</translation>
     </message>
     <message>
+        <source>&amp;Request payment</source>
+        <translation>Тўловни &amp;сўраш</translation>
+    </message>
+    <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
         <translation>Танланган сўровни кўрсатиш (икки марта босилганда ҳам бир хил амал бажарилсин)</translation>
     </message>
@@ -939,20 +937,12 @@
         <translation>Расмни &amp;сақлаш</translation>
     </message>
     <message>
-        <source>Amount</source>
-        <translation>Миқдори</translation>
-    </message>
-    <message>
         <source>Wallet</source>
         <translation>Ҳамён</translation>
     </message>
-</context>
+    </context>
 <context>
     <name>RecentRequestsTableModel</name>
-    <message>
-        <source>Date</source>
-        <translation>Сана</translation>
-    </message>
     </context>
 <context>
     <name>SendCoinsDialog</name>
@@ -1098,11 +1088,7 @@
     </context>
 <context>
     <name>SendConfirmationDialog</name>
-    <message>
-        <source>Yes</source>
-        <translation>Ҳа</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>ShutdownWindow</name>
     </context>
@@ -1134,26 +1120,17 @@
     </message>
     </context>
 <context>
+    <name>SplashScreen</name>
+    <message>
+        <source>[testnet]</source>
+        <translation>[testnet]</translation>
+    </message>
+</context>
+<context>
     <name>TrafficGraphWidget</name>
     </context>
 <context>
     <name>TransactionDesc</name>
-    <message>
-        <source>Date</source>
-        <translation>Сана</translation>
-    </message>
-    <message>
-        <source>unknown</source>
-        <translation>Номаълум</translation>
-    </message>
-    <message>
-        <source>Transaction fee</source>
-        <translation>Ўтказма тўлови</translation>
-    </message>
-    <message>
-        <source>Amount</source>
-        <translation>Миқдори</translation>
-    </message>
     </context>
 <context>
     <name>TransactionDescDialog</name>
@@ -1164,21 +1141,9 @@
     </context>
 <context>
     <name>TransactionTableModel</name>
-    <message>
-        <source>Date</source>
-        <translation>Сана</translation>
-    </message>
     </context>
 <context>
     <name>TransactionView</name>
-    <message>
-        <source>Confirmed</source>
-        <translation>Тасдиқланди</translation>
-    </message>
-    <message>
-        <source>Date</source>
-        <translation>Сана</translation>
-    </message>
     </context>
 <context>
     <name>UnitDisplayStatusBarControl</name>
@@ -1191,24 +1156,24 @@
     </context>
 <context>
     <name>WalletModel</name>
-    <message>
-        <source>Send Coins</source>
-        <translation>Тангаларни жунат</translation>
-    </message>
     </context>
 <context>
     <name>WalletView</name>
-    <message>
-        <source>&amp;Export</source>
-        <translation>&amp;Экспорт</translation>
-    </message>
-    <message>
-        <source>Export the data in the current tab to a file</source>
-        <translation>Жорий ички ойна ичидаги маълумотларни файлга экспорт қилиш</translation>
-    </message>
     </context>
 <context>
     <name>bitcoin-core</name>
+    <message>
+        <source>Bitcoin Core</source>
+        <translation>Bitcoin Core</translation>
+    </message>
+    <message>
+        <source>Information</source>
+        <translation>Маълумот</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Диққат</translation>
+    </message>
     <message>
         <source>Insufficient funds</source>
         <translation>Кам миқдор</translation>
@@ -1228,6 +1193,10 @@
     <message>
         <source>Done loading</source>
         <translation>Юклаш тайёр</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Хатолик</translation>
     </message>
 </context>
 </TS>

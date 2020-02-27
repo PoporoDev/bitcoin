@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2019 The Bitcoin Core developers
+// Copyright (c) 2009-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,6 +8,9 @@
 #include <crypto/sha256.h>
 #include <pubkey.h>
 #include <script/script.h>
+#include <util/system.h>
+#include <util/strencodings.h>
+
 
 typedef std::vector<unsigned char> valtype;
 
@@ -15,10 +18,6 @@ bool fAcceptDatacarrier = DEFAULT_ACCEPT_DATACARRIER;
 unsigned nMaxDatacarrierBytes = MAX_OP_RETURN_RELAY;
 
 CScriptID::CScriptID(const CScript& in) : uint160(Hash160(in.begin(), in.end())) {}
-
-ScriptHash::ScriptHash(const CScript& in) : uint160(Hash160(in.begin(), in.end())) {}
-
-PKHash::PKHash(const CPubKey& pubkey) : uint160(pubkey.GetID()) {}
 
 WitnessV0ScriptHash::WitnessV0ScriptHash(const CScript& in)
 {
@@ -44,48 +43,49 @@ const char* GetTxnOutputType(txnouttype t)
 
 static bool MatchPayToPubkey(const CScript& script, valtype& pubkey)
 {
-    if (script.size() == CPubKey::SIZE + 2 && script[0] == CPubKey::SIZE && script.back() == OP_CHECKSIG) {
-        pubkey = valtype(script.begin() + 1, script.begin() + CPubKey::SIZE + 1);
-        return CPubKey::ValidSize(pubkey);
-    }
-    if (script.size() == CPubKey::COMPRESSED_SIZE + 2 && script[0] == CPubKey::COMPRESSED_SIZE && script.back() == OP_CHECKSIG) {
-        pubkey = valtype(script.begin() + 1, script.begin() + CPubKey::COMPRESSED_SIZE + 1);
-        return CPubKey::ValidSize(pubkey);
-    }
-    return false;
+	if (script.size() == CPubKey::PUBLIC_KEY_SIZE + 2 && script[0] == CPubKey::PUBLIC_KEY_SIZE && script.back() == OP_CHECKSIG) {
+		pubkey = valtype(script.begin() + 1, script.begin() + CPubKey::PUBLIC_KEY_SIZE + 1);
+		return CPubKey::ValidSize(pubkey);
+	}
+	if (script.size() == CPubKey::COMPRESSED_PUBLIC_KEY_SIZE + 2 && script[0] == CPubKey::COMPRESSED_PUBLIC_KEY_SIZE && script.back() == OP_CHECKSIG) {
+		pubkey = valtype(script.begin() + 1, script.begin() + CPubKey::COMPRESSED_PUBLIC_KEY_SIZE + 1);
+		return CPubKey::ValidSize(pubkey);
+	}
+
+	return false;
 }
 
 static bool MatchPayToPubkeyHash(const CScript& script, valtype& pubkeyhash)
 {
-    if (script.size() == 25 && script[0] == OP_DUP && script[1] == OP_HASH160 && script[2] == 20 && script[23] == OP_EQUALVERIFY && script[24] == OP_CHECKSIG) {
-        pubkeyhash = valtype(script.begin () + 3, script.begin() + 23);
-        return true;
-    }
-    return false;
+	if (script.size() == 25 && script[0] == OP_DUP && script[1] == OP_HASH160 && script[2] == 20 && script[23] == OP_EQUALVERIFY && script[24] == OP_CHECKSIG) {
+		pubkeyhash = valtype(script.begin() + 3, script.begin() + 23);
+		return true;
+	}
+	return false;
 }
 
 /** Test for "small positive integer" script opcodes - OP_1 through OP_16. */
 static constexpr bool IsSmallInteger(opcodetype opcode)
 {
-    return opcode >= OP_1 && opcode <= OP_16;
+	return opcode >= OP_1 && opcode <= OP_16;
 }
 
 static bool MatchMultisig(const CScript& script, unsigned int& required, std::vector<valtype>& pubkeys)
 {
-    opcodetype opcode;
-    valtype data;
-    CScript::const_iterator it = script.begin();
-    if (script.size() < 1 || script.back() != OP_CHECKMULTISIG) return false;
+	opcodetype opcode;
+	valtype data;
+	CScript::const_iterator it = script.begin();
+	if (script.size() < 1 || script.back() != OP_CHECKMULTISIG) return false;
 
-    if (!script.GetOp(it, opcode, data) || !IsSmallInteger(opcode)) return false;
-    required = CScript::DecodeOP_N(opcode);
-    while (script.GetOp(it, opcode, data) && CPubKey::ValidSize(data)) {
-        pubkeys.emplace_back(std::move(data));
-    }
-    if (!IsSmallInteger(opcode)) return false;
-    unsigned int keys = CScript::DecodeOP_N(opcode);
-    if (pubkeys.size() != keys || keys < required) return false;
-    return (it + 1 == script.end());
+	if (!script.GetOp(it, opcode, data) || !IsSmallInteger(opcode)) return false;
+	required = CScript::DecodeOP_N(opcode);
+	while (script.GetOp(it, opcode, data) && CPubKey::ValidSize(data)) {
+		pubkeys.emplace_back(std::move(data));
+	}
+	if (!IsSmallInteger(opcode)) return false;
+	unsigned int keys = CScript::DecodeOP_N(opcode);
+	if (pubkeys.size() != keys || keys < required) return false;
+	return (it + 1 == script.end());
 }
 
 txnouttype Solver(const CScript& scriptPubKey, std::vector<std::vector<unsigned char>>& vSolutionsRet)
@@ -163,17 +163,17 @@ bool ExtractDestination(const CScript& scriptPubKey, CTxDestination& addressRet)
         if (!pubKey.IsValid())
             return false;
 
-        addressRet = PKHash(pubKey);
+        addressRet = pubKey.GetID();
         return true;
     }
     else if (whichType == TX_PUBKEYHASH)
     {
-        addressRet = PKHash(uint160(vSolutions[0]));
+        addressRet = CKeyID(uint160(vSolutions[0]));
         return true;
     }
     else if (whichType == TX_SCRIPTHASH)
     {
-        addressRet = ScriptHash(uint160(vSolutions[0]));
+        addressRet = CScriptID(uint160(vSolutions[0]));
         return true;
     } else if (whichType == TX_WITNESS_V0_KEYHASH) {
         WitnessV0KeyHash hash;
@@ -218,7 +218,7 @@ bool ExtractDestinations(const CScript& scriptPubKey, txnouttype& typeRet, std::
             if (!pubKey.IsValid())
                 continue;
 
-            CTxDestination address = PKHash(pubKey);
+            CTxDestination address = pubKey.GetID();
             addressRet.push_back(address);
         }
 
@@ -251,13 +251,15 @@ public:
         return false;
     }
 
-    bool operator()(const PKHash &keyID) const {
+    bool operator()(const CKeyID &keyID) const {
         script->clear();
         *script << OP_DUP << OP_HASH160 << ToByteVector(keyID) << OP_EQUALVERIFY << OP_CHECKSIG;
-        return true;
+        //*script << OP_DUP << OP_HASH160 << ToByteVector(keyID) << OP_EQUALVERIFY << OP_CHECKSIGVERIFY << std::vector<unsigned char>((unsigned char)'a');
+ 
+		return true;
     }
 
-    bool operator()(const ScriptHash &scriptID) const {
+    bool operator()(const CScriptID &scriptID) const {
         script->clear();
         *script << OP_HASH160 << ToByteVector(scriptID) << OP_EQUAL;
         return true;

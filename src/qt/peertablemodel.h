@@ -13,6 +13,7 @@
 #include <QAbstractTableModel>
 #include <QStringList>
 
+class ClientModel;
 class PeerTablePriv;
 
 namespace interfaces {
@@ -50,7 +51,7 @@ class PeerTableModel : public QAbstractTableModel
     Q_OBJECT
 
 public:
-    explicit PeerTableModel(interfaces::Node& node, QObject* parent);
+    explicit PeerTableModel(interfaces::Node& node, ClientModel *parent = nullptr);
     ~PeerTableModel();
     const CNodeCombinedStats *getNodeStats(int idx);
     int getRowByNodeId(NodeId nodeid);
@@ -82,6 +83,7 @@ public Q_SLOTS:
 
 private:
     interfaces::Node& m_node;
+    ClientModel *clientModel;
     QStringList columns;
     std::unique_ptr<PeerTablePriv> priv;
     QTimer *timer;

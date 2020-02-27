@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2019 The Bitcoin Core developers
+// Copyright (c) 2009-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,14 +10,26 @@
 #include <string>
 #include <util/system.h>
 
-struct NodeContext;
-namespace boost {
+namespace interfaces {
+class Chain;
+class ChainClient;
+} // namespace interfaces
+
+//! Pointers to interfaces used during init and destroyed on shutdown.
+struct InitInterfaces
+{
+    std::unique_ptr<interfaces::Chain> chain;
+    std::vector<std::unique_ptr<interfaces::ChainClient>> chain_clients;
+};
+
+namespace boost
+{
 class thread_group;
 } // namespace boost
 
 /** Interrupt threads */
-void Interrupt(NodeContext& node);
-void Shutdown(NodeContext& node);
+void Interrupt();
+void Shutdown(InitInterfaces& interfaces);
 //!Initialize the logging infrastructure
 void InitLogging();
 //!Parameter interaction: change current parameters depending on various rules
@@ -51,7 +63,7 @@ bool AppInitLockDataDirectory();
  * @note This should only be done after daemonization. Call Shutdown() if this function fails.
  * @pre Parameters should be parsed and config file should be read, AppInitLockDataDirectory should have been called.
  */
-bool AppInitMain(NodeContext& node);
+bool AppInitMain(InitInterfaces& interfaces);
 
 /**
  * Setup the arguments for gArgs

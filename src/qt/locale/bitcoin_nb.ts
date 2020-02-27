@@ -3,11 +3,11 @@
     <name>AddressBookPage</name>
     <message>
         <source>Right-click to edit address or label</source>
-        <translation>Høyreklikk for å redigere adresse, eller beskrivelse</translation>
+        <translation>Høyreklikk for å redigere adressen eller merkelappen</translation>
     </message>
     <message>
         <source>Create a new address</source>
-        <translation>Opprett en ny adresse</translation>
+        <translation>Opprett en ny addresse</translation>
     </message>
     <message>
         <source>&amp;New</source>
@@ -15,7 +15,7 @@
     </message>
     <message>
         <source>Copy the currently selected address to the system clipboard</source>
-        <translation>Kopier den valgte adressen til utklippstavlen</translation>
+        <translation>Kopier den valgte adressen til systemets utklippstavle</translation>
     </message>
     <message>
         <source>&amp;Copy</source>
@@ -27,19 +27,19 @@
     </message>
     <message>
         <source>Delete the currently selected address from the list</source>
-        <translation>Slett den valgte adressen fra listen</translation>
+        <translation>Slett den valgte adressen fra listen.</translation>
     </message>
     <message>
         <source>Enter address or label to search</source>
-        <translation>Oppgi adresse, eller stikkord, for å søke</translation>
+        <translation>Skriv inn adresse eller merkelapp for å søke</translation>
     </message>
     <message>
         <source>Export the data in the current tab to a file</source>
-        <translation>Eksporter data i den valgte fliken til en fil</translation>
+        <translation>Eksporter data fra nåværende fane til fil</translation>
     </message>
     <message>
         <source>&amp;Export</source>
-        <translation>&amp;Eksport</translation>
+        <translation>&amp;Eksporter</translation>
     </message>
     <message>
         <source>&amp;Delete</source>
@@ -47,62 +47,66 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Velg en adresse å sende mynter til</translation>
+        <translation>Velg adressen å sende mynter til</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Velg adressen som skal motta myntene</translation>
+        <translation>Velg adressen til å motta mynter med</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
-        <translation>&amp;Velg</translation>
+        <translation>V&amp;elg</translation>
     </message>
     <message>
         <source>Sending addresses</source>
-        <translation>Avsender adresser</translation>
+        <translation>Utsendingsadresser</translation>
     </message>
     <message>
         <source>Receiving addresses</source>
-        <translation>Mottager adresser</translation>
+        <translation>Mottaksadresser</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dette er dine Bitcoin adresser for å sende  å sende betalinger. Husk å sjekke beløp og mottager adresser før du sender mynter.</translation>
+        <translation>Dette er dine Bitcoin-adresser for sending av betalinger. Sjekk alltid beløpet og mottakeradressen før sending av mynter.</translation>
+    </message>
+    <message>
+        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dette er dine Bitcoin-adresser for å sende betalinger med. Det er anbefalt å bruke en ny mottaksadresse for hver transaksjon.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
-        <translation>&amp;Kopier adresse</translation>
+        <translation>&amp;Kopier Adresse</translation>
     </message>
     <message>
         <source>Copy &amp;Label</source>
-        <translation>Kopier &amp;beskrivelse</translation>
+        <translation>Kopier &amp;Merkelapp</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
-        <translation>R&amp;ediger</translation>
+        <translation>&amp;Rediger</translation>
     </message>
     <message>
         <source>Export Address List</source>
-        <translation>Eksporter adresse listen</translation>
+        <translation>Eksporter adresseliste</translation>
     </message>
     <message>
         <source>Comma separated file (*.csv)</source>
-        <translation>Komma separert fil (*.csv)</translation>
+        <translation>Kommaseparert fil (*.csv)</translation>
     </message>
     <message>
         <source>Exporting Failed</source>
-        <translation>Eksporten feilet</translation>
+        <translation>Eksportering feilet</translation>
     </message>
     <message>
         <source>There was an error trying to save the address list to %1. Please try again.</source>
-        <translation>Fet oppstod en feil ved lagring av adresselisten til %1. Vennligst prøv igjen.</translation>
+        <translation>Det oppstod en feil under lagring av adresselisten til %1. Vennligst prøv på nytt.</translation>
     </message>
 </context>
 <context>
     <name>AddressTableModel</name>
     <message>
         <source>Label</source>
-        <translation>Beskrivelse</translation>
+        <translation>Merkelapp</translation>
     </message>
     <message>
         <source>Address</source>
@@ -110,58 +114,70 @@
     </message>
     <message>
         <source>(no label)</source>
-        <translation>(ingen beskrivelse)</translation>
+        <translation>(ingen merkelapp)</translation>
     </message>
 </context>
 <context>
     <name>AskPassphraseDialog</name>
     <message>
         <source>Passphrase Dialog</source>
-        <translation>Passord dialog</translation>
+        <translation>Dialog for Adgangsfrase</translation>
     </message>
     <message>
         <source>Enter passphrase</source>
-        <translation>Oppgi passord setning</translation>
+        <translation>Angi adgangsfrase</translation>
     </message>
     <message>
         <source>New passphrase</source>
-        <translation>Ny passord setning</translation>
+        <translation>Ny adgangsfrase</translation>
     </message>
     <message>
         <source>Repeat new passphrase</source>
-        <translation>Repeter passorsetningen</translation>
+        <translation>Gjenta ny adgangsfrase</translation>
+    </message>
+    <message>
+        <source>Show password</source>
+        <translation>Vis passord</translation>
+    </message>
+    <message>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation>Oppgi adgangsfrasen til lommeboken.&lt;br/&gt;Vennligst bruk en adgangsfrase med &lt;b&gt;ti eller flere tilfeldige tegn&lt;/b&gt;, eller &lt;b&gt;åtte eller flere ord&lt;/b&gt;.</translation>
     </message>
     <message>
         <source>Encrypt wallet</source>
-        <translation>Krypter lommeboken</translation>
+        <translation>Krypter lommebok</translation>
     </message>
     <message>
         <source>This operation needs your wallet passphrase to unlock the wallet.</source>
-        <translation>Denne operasjonen krever passordsetningen for å låse opp lommeboken.</translation>
+        <translation>Denne operasjonen krever adgangsfrasen til lommeboken for å låse den opp.</translation>
     </message>
     <message>
         <source>Unlock wallet</source>
-        <translation>Lås opp lommeboken</translation>
+        <translation>Lås opp lommebok</translation>
     </message>
     <message>
         <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
-        <translation>Denne operasjonen krever passordsetningen for å dekryptere lommeboken.</translation>
+        <translation>Denne operasjonen krever adgangsfrasen til lommeboken for å dekryptere den.</translation>
     </message>
     <message>
         <source>Decrypt wallet</source>
-        <translation>Dekrypter lommeboken</translation>
+        <translation>Dekrypter lommebok</translation>
     </message>
     <message>
         <source>Change passphrase</source>
-        <translation>Endre passordsetningen</translation>
+        <translation>Endre adgangsfrase</translation>
+    </message>
+    <message>
+        <source>Enter the old passphrase and new passphrase to the wallet.</source>
+        <translation>Angi den gamle og en ny adgangsfrase til lommeboken.</translation>
     </message>
     <message>
         <source>Confirm wallet encryption</source>
-        <translation>Bekreft kryptering av lommeboken</translation>
+        <translation>Bekreft kryptering av lommebok</translation>
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>Advarsel: Dersom du krypterer lommeboken og mister passordsetningen vil du &lt;b&gt;MISTE ALLE DINE BITCOIN&lt;/b&gt;!</translation>
+        <translation>Advarsel: Hvis du krypterer lommeboken og mister adgangsfrasen, så vil du &lt;b&gt;MISTE ALLE DINE BITCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -169,43 +185,39 @@
     </message>
     <message>
         <source>Wallet encrypted</source>
-        <translation>Lommeboken er kryptert</translation>
-    </message>
-    <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Husk at å kryptere lommeboken ikke vil beskytte dine bitcoins fullstendig fra å bli stjålet av skadevare som infiserer datamaskinen din.</translation>
+        <translation>Lommebok kryptert</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
-        <translation>VIKTIG: Alle tidligere sikkerhetskopier du har tatt av lommebokfilen bør erstattes med den nye krypterte lommebokfilen. Av sikkerhetsgrunner vil tidligere sikkerhetskopier av lommebokfilen bli ubrukelige når du begynner å bruke den ny kypterte lommeboken.</translation>
+        <translation>VIKTIG: Tidligere sikkerhetskopier av din lommebokfil bør erstattes med den nylig genererte og krypterte filen, da de blir ugyldiggjort av sikkerhetshensyn så snart du begynner å bruke den nye krypterte lommeboken.</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>
-        <translation>Kryptering av lommeboken feilet</translation>
+        <translation>Kryptering av lommebok feilet</translation>
     </message>
     <message>
         <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
-        <translation>Lommebokkrypteringen feilet pga. en intern feil. Lommeboken din ble ikke kryptert.</translation>
+        <translation>Kryptering av lommebok feilet på grunn av en intern feil. Din lommebok ble ikke kryptert.</translation>
     </message>
     <message>
         <source>The supplied passphrases do not match.</source>
-        <translation>De oppgitte passordsetningene er forskjellige.</translation>
+        <translation>De angitte adgangsfrasene er ulike.</translation>
     </message>
     <message>
         <source>Wallet unlock failed</source>
-        <translation>Opplåsing av lommeboken feilet</translation>
+        <translation>Opplåsing av lommebok feilet</translation>
     </message>
     <message>
         <source>The passphrase entered for the wallet decryption was incorrect.</source>
-        <translation>Passordsetningen som ble oppgitt for å dekryptere lommeboken var feil.</translation>
+        <translation>Adgangsfrasen angitt for dekryptering av lommeboken var feil.</translation>
     </message>
     <message>
         <source>Wallet decryption failed</source>
-        <translation>Dekryptering av lommeboken feilet</translation>
+        <translation>Dekryptering av lommebok feilet</translation>
     </message>
     <message>
         <source>Wallet passphrase was successfully changed.</source>
-        <translation>Passordsetningen for lommeboken ble endret</translation>
+        <translation>Adgangsfrase for lommebok er endret.</translation>
     </message>
     <message>
         <source>Warning: The Caps Lock key is on!</source>
@@ -220,18 +232,18 @@
     </message>
     <message>
         <source>Banned Until</source>
-        <translation>Utestengt Til</translation>
+        <translation>Utestengt til</translation>
     </message>
 </context>
 <context>
     <name>BitcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
-        <translation>Signer &amp;melding</translation>
+        <translation>Signer &amp;melding...</translation>
     </message>
     <message>
         <source>Synchronizing with network...</source>
-        <translation>Synkroniserer med nettverket</translation>
+        <translation>Synkroniserer med nettverk...</translation>
     </message>
     <message>
         <source>&amp;Overview</source>
@@ -247,7 +259,7 @@
     </message>
     <message>
         <source>Browse transaction history</source>
-        <translation>Bla gjennom transaksjoner</translation>
+        <translation>Vis transaksjonshistorikk</translation>
     </message>
     <message>
         <source>E&amp;xit</source>
@@ -255,11 +267,11 @@
     </message>
     <message>
         <source>Quit application</source>
-        <translation>Avslutt program</translation>
+        <translation>Avslutt applikasjonen</translation>
     </message>
     <message>
         <source>&amp;About %1</source>
-        <translation>&amp;Om %1</translation>
+        <translation> &amp;Om %1</translation>
     </message>
     <message>
         <source>Show information about %1</source>
@@ -275,67 +287,59 @@
     </message>
     <message>
         <source>&amp;Options...</source>
-        <translation>&amp;Alternativer</translation>
+        <translation>&amp;Innstillinger...</translation>
     </message>
     <message>
         <source>Modify configuration options for %1</source>
-        <translation>Endre konfigurasjonsalternativer for %1</translation>
+        <translation>Endre innstilinger for %1</translation>
     </message>
     <message>
         <source>&amp;Encrypt Wallet...</source>
-        <translation>&amp;Krypter lommebok...</translation>
+        <translation>&amp;Krypter Lommebok...</translation>
     </message>
     <message>
         <source>&amp;Backup Wallet...</source>
-        <translation>&amp;Sikkerhetskopier lommebok</translation>
+        <translation>Lag &amp;Sikkerhetskopi av Lommebok...</translation>
     </message>
     <message>
         <source>&amp;Change Passphrase...</source>
-        <translation>&amp;Endre passordsetning</translation>
+        <translation>&amp;Endre Adgangsfrase...</translation>
     </message>
     <message>
         <source>Open &amp;URI...</source>
-        <translation>Åpne &amp;URI</translation>
-    </message>
-    <message>
-        <source>Wallet:</source>
-        <translation>Lommebok:</translation>
+        <translation>Åpne &amp;URI...</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
-        <translation>Klikk for å slå av nettverksaktivitet.</translation>
+        <translation>Klikk for å deaktivere nettverksaktivitet.</translation>
     </message>
     <message>
         <source>Network activity disabled.</source>
-        <translation>Nettverksaktivitet er slått av</translation>
+        <translation>Nettverksaktivitet deaktivert.</translation>
     </message>
     <message>
         <source>Click to enable network activity again.</source>
-        <translation>Klikk for å slå på nettverksaktivitet igjen.</translation>
+        <translation>Klikk for å aktivere nettverksaktivitet igjen.</translation>
     </message>
     <message>
         <source>Syncing Headers (%1%)...</source>
-        <translation>Synkroniserer Headers (%1%)...</translation>
+        <translation>Synkroniserer blokkhoder (%1%)...</translation>
     </message>
     <message>
         <source>Reindexing blocks on disk...</source>
-        <translation>Reindekserer blokker på disken</translation>
-    </message>
-    <message>
-        <source>Proxy is &lt;b&gt;enabled&lt;/b&gt;: %1</source>
-        <translation>Proxy er &lt;b&gt;slått på&lt;/b&gt;: %1</translation>
+        <translation>Reindekserer blokker på harddisk...</translation>
     </message>
     <message>
         <source>Send coins to a Bitcoin address</source>
-        <translation>Send mynter til en Bitcoin adresse</translation>
+        <translation>Send til en Bitcoin-adresse</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
-        <translation>Sikkerhetskopier lommeboken til en annen lokasjon</translation>
+        <translation>Sikkerhetskopier lommebok til annet sted</translation>
     </message>
     <message>
         <source>Change the passphrase used for wallet encryption</source>
-        <translation>Endre passordsetningen for kryptering av lommeboken</translation>
+        <translation>Endre adgangsfrasen brukt for kryptering av lommebok</translation>
     </message>
     <message>
         <source>&amp;Debug window</source>
@@ -343,15 +347,19 @@
     </message>
     <message>
         <source>Open debugging and diagnostic console</source>
-        <translation>Åpne konsoll for feilsøking og diagnostisering</translation>
+        <translation>Åpne konsoll for feilsøk og diagnostikk</translation>
     </message>
     <message>
         <source>&amp;Verify message...</source>
-        <translation>&amp;Verifiser meldingen...</translation>
+        <translation>&amp;Verifiser melding...</translation>
+    </message>
+    <message>
+        <source>Bitcoin</source>
+        <translation>Bitcoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
-        <translation>&amp;Sende</translation>
+        <translation>&amp;Send</translation>
     </message>
     <message>
         <source>&amp;Receive</source>
@@ -359,11 +367,11 @@
     </message>
     <message>
         <source>&amp;Show / Hide</source>
-        <translation>Vi&amp;s / Skjul</translation>
+        <translation>&amp;Vis / Skjul</translation>
     </message>
     <message>
         <source>Show or hide the main Window</source>
-        <translation>Vis, eller skjul, hovedvinduet</translation>
+        <translation>Vis eller skjul hovedvinduet</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
@@ -371,11 +379,11 @@
     </message>
     <message>
         <source>Sign messages with your Bitcoin addresses to prove you own them</source>
-        <translation>Signer meldingene med Bitcoin adresse for å bevise at diu eier dem</translation>
+        <translation>Signer en melding med Bitcoin-adressene dine for å bevise at du eier dem</translation>
     </message>
     <message>
         <source>Verify messages to ensure they were signed with specified Bitcoin addresses</source>
-        <translation>Verifiser meldinger for å sikre at de ble signert med en angitt Bitcoin adresse</translation>
+        <translation>Bekreft meldinger for å være sikker på at de ble signert av en angitt Bitcoin-adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -383,7 +391,7 @@
     </message>
     <message>
         <source>&amp;Settings</source>
-        <translation>Inn&amp;stillinger</translation>
+        <translation>&amp;Innstillinger</translation>
     </message>
     <message>
         <source>&amp;Help</source>
@@ -391,43 +399,43 @@
     </message>
     <message>
         <source>Tabs toolbar</source>
-        <translation>Hjelpelinje for fliker</translation>
+        <translation>Verktøylinje for faner</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bitcoin: URIs)</source>
-        <translation>Be om betalinger (genererer QR-koder og bitcoin-URIer)</translation>
+        <translation>Forespør betalinger (genererer QR-koder og bitcoin: URIer)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
-        <translation>Vis lista over brukte sendeadresser og merkelapper</translation>
+        <translation>Vis listen av brukte utsendingsadresser og merkelapper</translation>
     </message>
     <message>
         <source>Show the list of used receiving addresses and labels</source>
-        <translation>Vis lista over brukte mottakeradresser og merkelapper</translation>
+        <translation>Vis listen over bruke mottaksadresser og merkelapper</translation>
     </message>
     <message>
         <source>Open a bitcoin: URI or payment request</source>
-        <translation>Åpne en bitcoin: URI eller betalingsforespørsel</translation>
+        <translation>Åpne en Bitcoin: URI eller betalingsetterspørring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
-        <translation>&amp;Kommandolinjealternativer</translation>
+        <translation>&amp;Kommandolinjevalg</translation>
     </message>
     <message numerus="yes">
         <source>%n active connection(s) to Bitcoin network</source>
-        <translation><numerusform>%n aktiv tilkobling til Bitcoin nettverket</numerusform><numerusform>%n aktive tilkoblinger til Bitcoin nettverket</numerusform></translation>
+        <translation><numerusform>%n aktiv forbindelse til Bitcoin-nettverket</numerusform><numerusform>%n aktive forbindelser til Bitcoin-nettverket</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
-        <translation>Indekserer blokker på disken...</translation>
+        <translation>Indekserer blokker på disk...</translation>
     </message>
     <message>
         <source>Processing blocks on disk...</source>
-        <translation>Behandler blokker på disken…</translation>
+        <translation>Prosesserer blokker på disk...</translation>
     </message>
     <message numerus="yes">
         <source>Processed %n block(s) of transaction history.</source>
-        <translation><numerusform>Har prosessert %n blokk av transaksjonshistorien</numerusform><numerusform>Har prosessert %n blokker av transaksjonshistorien</numerusform></translation>
+        <translation><numerusform>Lastet %n blokk med transaksjonshistorikk.</numerusform><numerusform>Lastet %n blokker med transaksjonshistorikk.</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -439,11 +447,11 @@
     </message>
     <message>
         <source>Transactions after this will not yet be visible.</source>
-        <translation>Transaksjoner etter dette vil ikke være synlige ennå.</translation>
+        <translation>Transaksjoner etter dette vil ikke være synlige enda.</translation>
     </message>
     <message>
         <source>Error</source>
-        <translation>Feilmelding</translation>
+        <translation>Feil</translation>
     </message>
     <message>
         <source>Warning</source>
@@ -458,40 +466,8 @@
         <translation>Oppdatert</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses</source>
-        <translation>&amp;Avsender adresser</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses</source>
-        <translation>&amp;Mottaker adresser</translation>
-    </message>
-    <message>
-        <source>Open Wallet</source>
-        <translation>Åpne Lommebok</translation>
-    </message>
-    <message>
-        <source>Open a wallet</source>
-        <translation>Åpne en lommebok</translation>
-    </message>
-    <message>
-        <source>Close Wallet...</source>
-        <translation>Lukk Lommebok...</translation>
-    </message>
-    <message>
-        <source>Close wallet</source>
-        <translation>Lukk lommebok</translation>
-    </message>
-    <message>
         <source>Show the %1 help message to get a list with possible Bitcoin command-line options</source>
-        <translation>Vis %1-hjelpemeldingen for å få en liste over mulige Bitcoin-kommandolinjealternativer</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>standard lommebok</translation>
-    </message>
-    <message>
-        <source>No wallets available</source>
-        <translation>Ingen lommebøker tilgjengelig</translation>
+        <translation>Vis %1 hjelpemeldingen for å få en liste med mulige Bitcoin kommandolinjevalg.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -502,28 +478,16 @@
         <translation>Minimer</translation>
     </message>
     <message>
-        <source>Zoom</source>
-        <translation>Zoom</translation>
-    </message>
-    <message>
-        <source>Main Window</source>
-        <translation>Hovedvindu</translation>
-    </message>
-    <message>
         <source>%1 client</source>
-        <translation>%1-klient</translation>
+        <translation>%1 klient</translation>
     </message>
     <message>
         <source>Connecting to peers...</source>
-        <translation>Kobler til peers...</translation>
+        <translation>Kobler til likemannsnettverket...</translation>
     </message>
     <message>
         <source>Catching up...</source>
-        <translation>Tar igjen…</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Feil: %1</translation>
+        <translation>Laster ned...</translation>
     </message>
     <message>
         <source>Date: %1
@@ -534,13 +498,7 @@
     <message>
         <source>Amount: %1
 </source>
-        <translation>Mengde: %1
-</translation>
-    </message>
-    <message>
-        <source>Wallet: %1
-</source>
-        <translation>Lommeboik: %1
+        <translation>Beløp: %1:
 </translation>
     </message>
     <message>
@@ -571,15 +529,11 @@
     </message>
     <message>
         <source>HD key generation is &lt;b&gt;enabled&lt;/b&gt;</source>
-        <translation>HD nøkkel generering er &lt;b&gt;slått på&lt;/b&gt;</translation>
+        <translation>HD nøkkelgenerering er &lt;b&gt;aktivert&lt;/b&gt;</translation>
     </message>
     <message>
         <source>HD key generation is &lt;b&gt;disabled&lt;/b&gt;</source>
-        <translation>HD nøkkel generering er &lt;b&gt;slått av&lt;/b&gt;</translation>
-    </message>
-    <message>
-        <source>Private key &lt;b&gt;disabled&lt;/b&gt;</source>
-        <translation>Privat nøkkel &lt;b&gt;deaktivert&lt;/b&gt;</translation>
+        <translation>HD nøkkelgenerering er&lt;b&gt;deaktivert&lt;/b&gt;</translation>
     </message>
     <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
@@ -734,7 +688,7 @@
     </message>
     <message>
         <source>(no label)</source>
-        <translation>(ingen beskrivelse)</translation>
+        <translation>(ingen merkelapp)</translation>
     </message>
     <message>
         <source>change from %1 (%2)</source>
@@ -745,12 +699,6 @@
         <translation>(veksel)</translation>
     </message>
 </context>
-<context>
-    <name>CreateWalletActivity</name>
-    </context>
-<context>
-    <name>CreateWalletDialog</name>
-    </context>
 <context>
     <name>EditAddressDialog</name>
     <message>
@@ -788,10 +736,6 @@
     <message>
         <source>The entered address "%1" is not a valid Bitcoin address.</source>
         <translation>Den angitte adressen "%1" er ikke en gyldig Bitcoin-adresse.</translation>
-    </message>
-    <message>
-        <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
-        <translation>Adresse "%1" eksisterer allerede som en mottaksadresse merket "%2" og kan derfor ikke bli lagt til som en sendingsadresse.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -904,7 +848,7 @@
     </message>
     <message>
         <source>Error</source>
-        <translation>Feilmelding</translation>
+        <translation>Feil</translation>
     </message>
     <message numerus="yes">
         <source>%n GB of free space available</source>
@@ -914,7 +858,7 @@
         <source>(of %n GB needed)</source>
         <translation><numerusform>(av %n GB som trengs)</numerusform><numerusform>(av %n GB som trengs)</numerusform></translation>
     </message>
-    </context>
+</context>
 <context>
     <name>ModalOverlay</name>
     <message>
@@ -983,17 +927,6 @@
     <message>
         <source>Select payment request file to open</source>
         <translation>Velg betalingsforespørselsfil å åpne</translation>
-    </message>
-</context>
-<context>
-    <name>OpenWalletActivity</name>
-    <message>
-        <source>default wallet</source>
-        <translation>standard lommebok</translation>
-    </message>
-    <message>
-        <source>Opening Wallet &lt;b&gt;%1&lt;/b&gt;...</source>
-        <translation>Åpner Lommebok &lt;b&gt;%1&lt;/b&gt;...</translation>
     </message>
 </context>
 <context>
@@ -1069,14 +1002,6 @@
     <message>
         <source>&amp;Network</source>
         <translation>&amp;Nettverk</translation>
-    </message>
-    <message>
-        <source>GB</source>
-        <translation>GB</translation>
-    </message>
-    <message>
-        <source>MiB</source>
-        <translation>MiB</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -1240,7 +1165,7 @@
     </message>
     <message>
         <source>Error</source>
-        <translation>Feilmelding</translation>
+        <translation>Feil</translation>
     </message>
     <message>
         <source>The configuration file could not be opened.</source>
@@ -1531,20 +1456,23 @@
         <translation>%1 GB</translation>
     </message>
     <message>
-        <source>Error: Specified data directory "%1" does not exist.</source>
-        <translation>Feil: Den spesifiserte datamappen "%1" finnes ikke.</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Feil: %1</translation>
-    </message>
-    <message>
         <source>%1 didn't yet exit safely...</source>
         <translation>%1 har ikke avsluttet trygt enda…</translation>
     </message>
     <message>
         <source>unknown</source>
         <translation>ukjent</translation>
+    </message>
+</context>
+<context>
+    <name>QObject::QObject</name>
+    <message>
+        <source>Error: Specified data directory "%1" does not exist.</source>
+        <translation>Feil: Den spesifiserte datamappen "%1" finnes ikke.</translation>
+    </message>
+    <message>
+        <source>Error: %1</source>
+        <translation>Feil: %1</translation>
     </message>
 </context>
 <context>
@@ -1556,14 +1484,6 @@
     <message>
         <source>&amp;Copy Image</source>
         <translation>&amp;Kopier bilde</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>Resulterende URI er for lang, prøv å redusere teksten for merkelapp / melding.</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>Feil ved koding av URI til QR-kode.</translation>
     </message>
     <message>
         <source>Save QR Code</source>
@@ -1639,14 +1559,6 @@
     <message>
         <source>Memory usage</source>
         <translation>Minnebruk</translation>
-    </message>
-    <message>
-        <source>Wallet: </source>
-        <translation>Lommebok:</translation>
-    </message>
-    <message>
-        <source>(none)</source>
-        <translation>(ingen)</translation>
     </message>
     <message>
         <source>&amp;Reset</source>
@@ -1916,6 +1828,10 @@
         <translation>Etterspurt betalingshistorikk</translation>
     </message>
     <message>
+        <source>&amp;Request payment</source>
+        <translation>&amp;Etterspør betaling</translation>
+    </message>
+    <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
         <translation>Vis den valgte etterspørringen (gjør det samme som å dobbelklikke på en oppføring)</translation>
     </message>
@@ -1988,7 +1904,7 @@
     </message>
     <message>
         <source>Label</source>
-        <translation>Beskrivelse</translation>
+        <translation>Merkelapp</translation>
     </message>
     <message>
         <source>Message</source>
@@ -1997,6 +1913,14 @@
     <message>
         <source>Wallet</source>
         <translation>Lommebok</translation>
+    </message>
+    <message>
+        <source>Resulting URI too long, try to reduce the text for label / message.</source>
+        <translation>Resulterende URI er for lang, prøv å redusere teksten for merkelapp / melding.</translation>
+    </message>
+    <message>
+        <source>Error encoding URI into QR Code.</source>
+        <translation>Feil ved koding av URI til QR-kode.</translation>
     </message>
 </context>
 <context>
@@ -2007,7 +1931,7 @@
     </message>
     <message>
         <source>Label</source>
-        <translation>Beskrivelse</translation>
+        <translation>Merkelapp</translation>
     </message>
     <message>
         <source>Message</source>
@@ -2015,7 +1939,7 @@
     </message>
     <message>
         <source>(no label)</source>
-        <translation>(ingen beskrivelse)</translation>
+        <translation>(ingen merkelapp)</translation>
     </message>
     <message>
         <source>(no message)</source>
@@ -2217,20 +2141,12 @@
         <translation>Du kan øke gebyret senere (signaliserer Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
-        <source>Please, review your transaction.</source>
-        <translation>Vennligst se over transaksjonen din.</translation>
-    </message>
-    <message>
         <source>Transaction fee</source>
         <translation>Transaksjonsgebyr</translation>
     </message>
     <message>
         <source>Not signalling Replace-By-Fee, BIP-125.</source>
         <translation>Signaliserer ikke Replace-By-Fee, BIP-125</translation>
-    </message>
-    <message>
-        <source>Total Amount</source>
-        <translation>Totalbeløp</translation>
     </message>
     <message>
         <source>Confirm send coins</source>
@@ -2294,7 +2210,7 @@
     </message>
     <message>
         <source>(no label)</source>
-        <translation>(ingen beskrivelse)</translation>
+        <translation>(ingen merkelapp)</translation>
     </message>
 </context>
 <context>
@@ -2542,6 +2458,13 @@
     </message>
 </context>
 <context>
+    <name>SplashScreen</name>
+    <message>
+        <source>[testnet]</source>
+        <translation>[testnett]</translation>
+    </message>
+</context>
+<context>
     <name>TrafficGraphWidget</name>
     <message>
         <source>KB/s</source>
@@ -2675,10 +2598,6 @@
         <translation>Total transaksjonsstørrelse</translation>
     </message>
     <message>
-        <source>Transaction virtual size</source>
-        <translation>Virtuell transaksjonsstørrelse</translation>
-    </message>
-    <message>
         <source>Output index</source>
         <translation>Utdatainndeks</translation>
     </message>
@@ -2738,7 +2657,7 @@
     </message>
     <message>
         <source>Label</source>
-        <translation>Beskrivelse</translation>
+        <translation>Merkelapp</translation>
     </message>
     <message numerus="yes">
         <source>Open for %n more block(s)</source>
@@ -2806,7 +2725,7 @@
     </message>
     <message>
         <source>(no label)</source>
-        <translation>(ingen beskrivelse)</translation>
+        <translation>(ingen merkelapp)</translation>
     </message>
     <message>
         <source>Transaction status. Hover over this field to show number of confirmations.</source>
@@ -2937,7 +2856,7 @@
     </message>
     <message>
         <source>Comma separated file (*.csv)</source>
-        <translation>Komma separert fil (*.csv)</translation>
+        <translation>Kommaseparert fil (*.csv)</translation>
     </message>
     <message>
         <source>Confirmed</source>
@@ -2957,7 +2876,7 @@
     </message>
     <message>
         <source>Label</source>
-        <translation>Beskrivelse</translation>
+        <translation>Merkelapp</translation>
     </message>
     <message>
         <source>Address</source>
@@ -2969,7 +2888,7 @@
     </message>
     <message>
         <source>Exporting Failed</source>
-        <translation>Eksporten feilet</translation>
+        <translation>Eksportering feilet</translation>
     </message>
     <message>
         <source>There was an error trying to save the transaction history to %1.</source>
@@ -3001,10 +2920,6 @@
 </context>
 <context>
     <name>WalletController</name>
-    <message>
-        <source>Close wallet</source>
-        <translation>Lukk lommebok</translation>
-    </message>
     </context>
 <context>
     <name>WalletFrame</name>
@@ -3055,20 +2970,16 @@
         <source>Could not commit transaction</source>
         <translation>Kunne ikke sende inn transaksjon</translation>
     </message>
-    <message>
-        <source>default wallet</source>
-        <translation>standard lommebok</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>WalletView</name>
     <message>
         <source>&amp;Export</source>
-        <translation>&amp;Eksport</translation>
+        <translation>&amp;Eksporter</translation>
     </message>
     <message>
         <source>Export the data in the current tab to a file</source>
-        <translation>Eksporter data i den valgte fliken til en fil</translation>
+        <translation>Eksporter data fra nåværende fane til fil</translation>
     </message>
     <message>
         <source>Backup Wallet</source>
@@ -3094,11 +3005,7 @@
         <source>The wallet data was successfully saved to %1.</source>
         <translation>Lommebokdata lagret til %1.</translation>
     </message>
-    <message>
-        <source>Cancel</source>
-        <translation>Avbryt</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>bitcoin-core</name>
     <message>
@@ -3128,6 +3035,10 @@
     <message>
         <source>Unable to start HTTP server. See debug log for details.</source>
         <translation>Kunne ikke starte HTTP-tjener. Se feilrettingslogg for detaljer.</translation>
+    </message>
+    <message>
+        <source>Bitcoin Core</source>
+        <translation>Bitcoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3242,6 +3153,10 @@
         <translation>Feil under åpning av blokkdatabase</translation>
     </message>
     <message>
+        <source>Error: Disk space is low!</source>
+        <translation>Feil: Lite ledig lagringsplass!</translation>
+    </message>
+    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Kunne ikke lytte på noen port. Bruk -listen=0 hvis det er dette du vil.</translation>
     </message>
@@ -3272,10 +3187,6 @@
     <message>
         <source>Invalid amount for -fallbackfee=&lt;amount&gt;: '%s'</source>
         <translation>Ugyldig beløp for -fallbackfee=&lt;amount&gt;: "%s"</translation>
-    </message>
-    <message>
-        <source>Upgrading txindex database</source>
-        <translation>Oppgraderer txindex databasen</translation>
     </message>
     <message>
         <source>Loading P2P addresses...</source>
@@ -3316,10 +3227,6 @@
     <message>
         <source>Unable to bind to %s on this computer. %s is probably already running.</source>
         <translation>Kan ikke binde til %s på denne datamaskinen. Sannsynligvis kjører %s allerede.</translation>
-    </message>
-    <message>
-        <source>Unable to generate keys</source>
-        <translation>Klarte ikke å lage nøkkel</translation>
     </message>
     <message>
         <source>Unsupported logging category %s=%s.</source>
@@ -3366,8 +3273,8 @@
         <translation>Feil ved oppgradering av kjedetilstandsdatabase</translation>
     </message>
     <message>
-        <source>Error: Disk space is low for %s</source>
-        <translation>Feil: Ikke nok ledig diskplass for %s</translation>
+        <source>Information</source>
+        <translation>Informasjon</translation>
     </message>
     <message>
         <source>Invalid -onion address or hostname: '%s'</source>
@@ -3410,12 +3317,6 @@
         <translation>Oppgitt -walletdir "%s" er ikke en katalog</translation>
     </message>
     <message>
-        <source>The specified config file %s does not exist
-</source>
-        <translation>Konfigurasjonsfilen %s eksisterer ikke
-</translation>
-    </message>
-    <message>
         <source>The transaction amount is too small to pay the fee</source>
         <translation>Transaksjonsbeløpet er for lite til å betale gebyr</translation>
     </message>
@@ -3426,6 +3327,10 @@
     <message>
         <source>Transaction amount too small</source>
         <translation>Transaksjonen er for liten</translation>
+    </message>
+    <message>
+        <source>Transaction too large for fee policy</source>
+        <translation>Transaksjon for stor for gebyrpolitikken</translation>
     </message>
     <message>
         <source>Transaction too large</source>
@@ -3442,6 +3347,14 @@
     <message>
         <source>Verifying wallet(s)...</source>
         <translation>Lommebokbekreftelse pågår…</translation>
+    </message>
+    <message>
+        <source>Wallet %s resides outside wallet directory %s</source>
+        <translation>Lommebok %s befinner seg utenfor lommebokkatalog %s</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Advarsel</translation>
     </message>
     <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
@@ -3478,6 +3391,10 @@
     <message>
         <source>Error loading wallet %s. Duplicate -wallet filename specified.</source>
         <translation>Feil ved innlasting av lommeboka %s. Duplisert -wallet -filnavn angitt.</translation>
+    </message>
+    <message>
+        <source>Keypool ran out, please call keypoolrefill first</source>
+        <translation>Nøkkelpuljen gikk tom, kall keypoolrefill først</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -3534,6 +3451,10 @@
     <message>
         <source>Done loading</source>
         <translation>Ferdig med lasting</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Feil</translation>
     </message>
 </context>
 </TS>

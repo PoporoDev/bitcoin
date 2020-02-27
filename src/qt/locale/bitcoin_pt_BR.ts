@@ -63,11 +63,15 @@
     </message>
     <message>
         <source>Receiving addresses</source>
-        <translation>Endereço de recebimento</translation>
+        <translation>Endereço de &amp;recebimento</translation>
     </message>
     <message>
         <source>These are your Bitcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Estes são os seus endereços para enviar pagamentos. Sempre cheque a quantia e o endereço do destinatário antes de enviar moedas.</translation>
+    </message>
+    <message>
+        <source>These are your Bitcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estes são os seus endereços para receber pagamentos. É recomendado usar um novo para cada transação.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -132,6 +136,14 @@
         <translation>Repita a nova frase de segurança</translation>
     </message>
     <message>
+        <source>Show password</source>
+        <translation>Mostrar senha</translation>
+    </message>
+    <message>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation>Insira a nova frase de segurança para a carteira.&lt;br/&gt;Use uma frase de segurança com &lt;b&gt;dez ou mais caracteres aleatórios&lt;/b&gt;, ou &lt;b&gt;oito ou mais palavras&lt;/b&gt;.</translation>
+    </message>
+    <message>
         <source>Encrypt wallet</source>
         <translation>Criptografar carteira</translation>
     </message>
@@ -156,6 +168,10 @@
         <translation>Alterar frase de segurança</translation>
     </message>
     <message>
+        <source>Enter the old passphrase and new passphrase to the wallet.</source>
+        <translation>Insira a frase de segurança antiga e a nova para a carteira.</translation>
+    </message>
+    <message>
         <source>Confirm wallet encryption</source>
         <translation>Confirmar criptografia da carteira</translation>
     </message>
@@ -172,8 +188,8 @@
         <translation>Carteira criptografada</translation>
     </message>
     <message>
-        <source>Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>Lembre-se que sua carteira criptografada não poderá proteger totalmente os seus bitcoins de serem roubados por softwares maldosos que infectem seu computador.</translation>
+        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
+        <translation>Sua carteira está agora criptografada. Lembre-se que criptografar sua carteira não protege totalmente seus bitcoins de serem roubados por malwares infectando seu computador.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -350,6 +366,10 @@
         <translation>&amp;Verificar mensagem...</translation>
     </message>
     <message>
+        <source>Bitcoin</source>
+        <translation>Bitcoin</translation>
+    </message>
+    <message>
         <source>&amp;Send</source>
         <translation>&amp;Enviar</translation>
     </message>
@@ -490,8 +510,12 @@
         <translation>carteira padrão</translation>
     </message>
     <message>
-        <source>No wallets available</source>
-        <translation>Nenhuma carteira disponível</translation>
+        <source>Opening Wallet &lt;b&gt;%1&lt;/b&gt;...</source>
+        <translation>Abrindo carteira &lt;b&gt;%1&lt;/b&gt;...</translation>
+    </message>
+    <message>
+        <source>Open Wallet Failed</source>
+        <translation>Falha ao abrir a carteira</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -504,6 +528,10 @@
     <message>
         <source>Zoom</source>
         <translation>Ampliar</translation>
+    </message>
+    <message>
+        <source>Restore</source>
+        <translation>Restaurar</translation>
     </message>
     <message>
         <source>Main Window</source>
@@ -520,10 +548,6 @@
     <message>
         <source>Catching up...</source>
         <translation>Recuperando o atraso...</translation>
-    </message>
-    <message>
-        <source>Error: %1</source>
-        <translation>Erro: %1</translation>
     </message>
     <message>
         <source>Date: %1
@@ -746,12 +770,6 @@
     </message>
 </context>
 <context>
-    <name>CreateWalletActivity</name>
-    </context>
-<context>
-    <name>CreateWalletDialog</name>
-    </context>
-<context>
     <name>EditAddressDialog</name>
     <message>
         <source>Edit Address</source>
@@ -918,7 +936,7 @@
         <source>(of %n GB needed)</source>
         <translation><numerusform>(de %n GB necessário)</numerusform><numerusform>(de %n GB necessário)</numerusform></translation>
     </message>
-    </context>
+</context>
 <context>
     <name>ModalOverlay</name>
     <message>
@@ -991,17 +1009,6 @@
     <message>
         <source>Select payment request file to open</source>
         <translation>Selecione o arquivo de cobrança para ser aberto</translation>
-    </message>
-</context>
-<context>
-    <name>OpenWalletActivity</name>
-    <message>
-        <source>default wallet</source>
-        <translation>carteira padrão</translation>
-    </message>
-    <message>
-        <source>Opening Wallet &lt;b&gt;%1&lt;/b&gt;...</source>
-        <translation>Abrindo carteira &lt;b&gt;%1&lt;/b&gt;...</translation>
     </message>
 </context>
 <context>
@@ -1567,6 +1574,21 @@
         <translation>%1 GB</translation>
     </message>
     <message>
+        <source>%1 didn't yet exit safely...</source>
+        <translation>%1 ainda não terminou com segurança...</translation>
+    </message>
+    <message>
+        <source>unknown</source>
+        <translation>desconhecido</translation>
+    </message>
+</context>
+<context>
+    <name>QObject::QObject</name>
+    <message>
+        <source>Error parsing command line arguments: %1.</source>
+        <translation>Erro ao analisar argumentos da linha de comando: %1.</translation>
+    </message>
+    <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
         <translation>Erro: Diretório de dados especificado "%1" não existe.</translation>
     </message>
@@ -1578,14 +1600,6 @@
         <source>Error: %1</source>
         <translation>Erro: %1</translation>
     </message>
-    <message>
-        <source>%1 didn't yet exit safely...</source>
-        <translation>%1 ainda não terminou com segurança...</translation>
-    </message>
-    <message>
-        <source>unknown</source>
-        <translation>desconhecido</translation>
-    </message>
 </context>
 <context>
     <name>QRImageWidget</name>
@@ -1596,14 +1610,6 @@
     <message>
         <source>&amp;Copy Image</source>
         <translation>&amp;Copiar imagem</translation>
-    </message>
-    <message>
-        <source>Resulting URI too long, try to reduce the text for label / message.</source>
-        <translation>URI resultante muito longa. Tente reduzir o texto do rótulo ou da mensagem.</translation>
-    </message>
-    <message>
-        <source>Error encoding URI into QR Code.</source>
-        <translation>Erro ao codificar o URI em código QR</translation>
     </message>
     <message>
         <source>Save QR Code</source>
@@ -1642,7 +1648,7 @@
     </message>
     <message>
         <source>Datadir</source>
-        <translation>Pasta de dados</translation>
+        <translation>Datadir</translation>
     </message>
     <message>
         <source>To specify a non-default location of the data directory use the '%1' option.</source>
@@ -1738,7 +1744,7 @@
     </message>
     <message>
         <source>Starting Block</source>
-        <translation>Bloco Inicial</translation>
+        <translation>Bloco inicial</translation>
     </message>
     <message>
         <source>Synced Headers</source>
@@ -1890,7 +1896,7 @@
     </message>
     <message>
         <source>Network activity disabled</source>
-        <translation>Atividade da rede desativada</translation>
+        <translation>Atividade da rede disativada</translation>
     </message>
     <message>
         <source>Executing command without any wallet</source>
@@ -1984,6 +1990,10 @@
         <translation>Histórico de cobranças</translation>
     </message>
     <message>
+        <source>&amp;Request payment</source>
+        <translation>&amp;Requisitar Pagamento</translation>
+    </message>
+    <message>
         <source>Show the selected request (does the same as double clicking an entry)</source>
         <translation>Mostra a cobrança selecionada (o mesmo que clicar duas vezes em um registro)</translation>
     </message>
@@ -2065,6 +2075,14 @@
     <message>
         <source>Wallet</source>
         <translation>Carteira</translation>
+    </message>
+    <message>
+        <source>Resulting URI too long, try to reduce the text for label / message.</source>
+        <translation>URI resultante muito longa. Tente reduzir o texto do rótulo ou da mensagem.</translation>
+    </message>
+    <message>
+        <source>Error encoding URI into QR Code.</source>
+        <translation>Erro ao codificar o URI em código QR</translation>
     </message>
 </context>
 <context>
@@ -2299,6 +2317,10 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
     <message>
         <source>You can increase the fee later (signals Replace-By-Fee, BIP-125).</source>
         <translation>Você pode aumentar a taxa depois (sinaliza Replace-By-Fee, BIP-125).</translation>
+    </message>
+    <message>
+        <source>from wallet %1</source>
+        <translation>da carteira %1</translation>
     </message>
     <message>
         <source>Please, review your transaction.</source>
@@ -2626,6 +2648,13 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
     </message>
 </context>
 <context>
+    <name>SplashScreen</name>
+    <message>
+        <source>[testnet]</source>
+        <translation>[testnet]</translation>
+    </message>
+</context>
+<context>
     <name>TrafficGraphWidget</name>
     <message>
         <source>KB/s</source>
@@ -2772,7 +2801,7 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Moedas recém mineradas precisam aguardar %1 blocos antes de serem gastas. Quando você gerou este bloco, ele foi disseminado pela rede para ser adicionado à blockchain. Se ele falhar em ser inserido na blockchain, seu estado será modificado para "não aceito" e ele não poderá ser gasto. Isso pode acontecer eventualmente quando blocos são gerados quase que simultaneamente.</translation>
+        <translation>Moedas recém minerados precisam aguardar %1 blocos antes de serem gastos. Quando o bloco foi gerado, ele foi disseminado pela rede para ser adicionado à blockchain. Se ele falhar em ser inserido na cadeia, seu estado será modificado para "não aceito" e ele não poderá ser gasto. Isso pode acontecer eventualmente quando blocos são gerados quase que simultaneamente.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -2937,7 +2966,7 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
     </message>
     <message>
         <source>Last month</source>
-        <translation>Mês passado</translation>
+        <translation>Último mês</translation>
     </message>
     <message>
         <source>This year</source>
@@ -3090,6 +3119,10 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
         <translation>Fechar carteira</translation>
     </message>
     <message>
+        <source>Are you sure you wish to close wallet &lt;i&gt;%1&lt;/i&gt;?</source>
+        <translation>Tem certeza que deseja fechar a carteira &lt;i&gt;%1&lt;/i&gt;?</translation>
+    </message>
+    <message>
         <source>Closing the wallet for too long can result in having to resync the entire chain if pruning is enabled.</source>
         <translation>Manter a carteira fechada por muito tempo pode resultar na necessidade de ressincronizar a block chain se prune está ativado.</translation>
     </message>
@@ -3211,11 +3244,15 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
     </message>
     <message>
         <source>Pruning blockstore...</source>
-        <translation>Prunando os blocos existentes...</translation>
+        <translation>Podando os blocos existentes...</translation>
     </message>
     <message>
         <source>Unable to start HTTP server. See debug log for details.</source>
         <translation>Não foi possível iniciar o servidor HTTP. Veja o log de depuração para detaihes.</translation>
+    </message>
+    <message>
+        <source>Bitcoin Core</source>
+        <translation>Bitcoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3342,6 +3379,10 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
         <translation>Erro ao abrir banco de dados de blocos</translation>
     </message>
     <message>
+        <source>Error: Disk space is low!</source>
+        <translation>Erro: Espaço em disco insuficiente!</translation>
+    </message>
+    <message>
         <source>Failed to listen on any port. Use -listen=0 if you want this.</source>
         <translation>Falha ao escutar em qualquer porta. Use -listen=0 se você quiser isso.</translation>
     </message>
@@ -3355,7 +3396,7 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
     </message>
     <message>
         <source>Incorrect or no genesis block found. Wrong datadir for network?</source>
-        <translation>Bloco gênese incorreto ou não encontrado. Pasta de dados errada para a rede?</translation>
+        <translation>Bloco gênese incorreto ou não encontrado. Datadir errado para a rede?</translation>
     </message>
     <message>
         <source>Initialization sanity check failed. %s is shutting down.</source>
@@ -3379,8 +3420,8 @@ Nota:  Como a taxa é calculada por byte, uma taxa de "100 satoshis por kB" por 
 Diretório de blocos especificados "%s" não existe.</translation>
     </message>
     <message>
-        <source>Unknown address type '%s'</source>
-        <translation>Tipo de endereço desconhecido '%s'</translation>
+        <source>Unable to create the PID file '%s': %s</source>
+        <translation>Não foi possível criar arquivo de PID '%s': %s</translation>
     </message>
     <message>
         <source>Upgrading txindex database</source>
@@ -3479,6 +3520,10 @@ Diretório de blocos especificados "%s" não existe.</translation>
         <translation>Erro: Espaço em disco menor que %s</translation>
     </message>
     <message>
+        <source>Information</source>
+        <translation>Informação</translation>
+    </message>
+    <message>
         <source>Invalid -onion address or hostname: '%s'</source>
         <translation>Endereço -onion ou nome do servidor inválido: '%s'</translation>
     </message>
@@ -3541,6 +3586,10 @@ Diretório de blocos especificados "%s" não existe.</translation>
         <translation>Quantidade da transação muito pequena</translation>
     </message>
     <message>
+        <source>Transaction too large for fee policy</source>
+        <translation>Transação muito grande para política de taxa</translation>
+    </message>
+    <message>
         <source>Transaction too large</source>
         <translation>Transação muito grande</translation>
     </message>
@@ -3549,16 +3598,20 @@ Diretório de blocos especificados "%s" não existe.</translation>
         <translation>Erro ao vincular em %s neste computador (bind retornou erro %s)</translation>
     </message>
     <message>
-        <source>Unable to create the PID file '%s': %s</source>
-        <translation>Não foi possível criar arquivo de PID '%s': %s</translation>
-    </message>
-    <message>
         <source>Unable to generate initial keys</source>
         <translation>Não foi possível gerar as chaves iniciais</translation>
     </message>
     <message>
         <source>Verifying wallet(s)...</source>
         <translation>Verificando carteira(s)...</translation>
+    </message>
+    <message>
+        <source>Wallet %s resides outside wallet directory %s</source>
+        <translation>Carteira %s reside fora do diretório da carteira %s</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>Atenção</translation>
     </message>
     <message>
         <source>Warning: unknown new rules activated (versionbit %i)</source>
@@ -3595,6 +3648,10 @@ Diretório de blocos especificados "%s" não existe.</translation>
     <message>
         <source>Error loading wallet %s. Duplicate -wallet filename specified.</source>
         <translation>Erro ao carregar carteira %s. Duplicado o nome do arquivo de -wallet.</translation>
+    </message>
+    <message>
+        <source>Keypool ran out, please call keypoolrefill first</source>
+        <translation>Keypool exaurida, por gentileza execute keypoolrefill primeiro</translation>
     </message>
     <message>
         <source>Starting network threads...</source>
@@ -3667,6 +3724,10 @@ Diretório de blocos especificados "%s" não existe.</translation>
     <message>
         <source>Done loading</source>
         <translation>Carregamento terminado!</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Erro</translation>
     </message>
 </context>
 </TS>

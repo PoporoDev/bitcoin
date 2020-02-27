@@ -4,15 +4,12 @@
 
 #include <test/fuzz/fuzz.h>
 
-#include <test/util/setup_common.h>
-
-#include <cstdint>
 #include <unistd.h>
-#include <vector>
 
-const std::function<void(const std::string&)> G_TEST_LOG_FUN{};
+#include <pubkey.h>
+#include <util/memory.h>
 
-#if defined(__AFL_COMPILER)
+
 static bool read_stdin(std::vector<uint8_t>& data)
 {
     uint8_t buffer[1024];
@@ -24,18 +21,16 @@ static bool read_stdin(std::vector<uint8_t>& data)
     }
     return length == 0;
 }
-#endif
 
-// Default initialization: Override using a non-weak initialize().
-__attribute__((weak)) void initialize()
+static void initialize()
 {
+    const static auto verify_handle = MakeUnique<ECCVerifyHandle>();
 }
 
 // This function is used by libFuzzer
 extern "C" int LLVMFuzzerTestOneInput(const uint8_t* data, size_t size)
 {
-    const std::vector<uint8_t> input(data, data + size);
-    test_one_input(input);
+    test_one_input(std::vector<uint8_t>(data, data + size));
     return 0;
 }
 
@@ -46,9 +41,13 @@ extern "C" int LLVMFuzzerInitialize(int* argc, char*** argv)
     return 0;
 }
 
-// Generally, the fuzzer will provide main(), except for AFL
-#if defined(__AFL_COMPILER)
-int main(int argc, char** argv)
+// Disabled under WIN32 due to clash with Cygwin's WinMain.
+#ifndef WIN32
+// Declare main(...) "weak" to allow for libFuzzer linking. libFuzzer provides
+// the main(...) function.
+__attribute__((weak))
+#endif
+int main(int argc, char **argv)
 {
     initialize();
 #ifdef __AFL_INIT
@@ -76,4 +75,3 @@ int main(int argc, char** argv)
 #endif
     return 0;
 }
-#endif
